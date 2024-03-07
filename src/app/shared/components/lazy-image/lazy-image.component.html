@@ -1,0 +1,31 @@
+
+
+<div class="d-flex justify-content-center">
+
+ <img
+    [src]="url"
+    [alt]="alt"
+    class="card-img-top animate__animated animate__fadeIn"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none'}"
+
+  >
+  <!-- Las imagenes en Angular tienen un eveto que se llamad load: se ejecuta cuando se carga al completo-->
+
+
+  <!-- [ngStyle]="{ display: hasLoaded ? '' : 'none'}" -->
+  <!-- Esto sirve para hacer que si el hasloaded es true, no se pone estilo, pero si es false, se pone none para ocultar la imagen-->
+
+<!-- Le hemos puesto animacion css de fadeIn para hacer efecto de mostrarse poco a poco al cargar -->
+
+
+<!-- Esta imagen la apuntamos al fichero svg que hemos hecho, para hacer lo de la carga-->
+  <img
+    *ngIf="!hasLoaded"
+    src="assets/loader.svg"
+    height="35"
+    width="35"
+    class="mt-3"
+  >
+
+</div>

@@ -1,0 +1,21 @@
+
+
+<div class="row p-3">
+  <div class="col-12">
+    <!-- Busqueda -->
+    <gifs-search-box></gifs-search-box>
+  </div>
+
+  <div class="col-12 pt-2">
+    <!-- Listado de Gifs -->
+    <!-- Nuevo componente: card-list    .ts, .html -->
+    <!-- Se tiene que declarar en el gifs.module -->
+    <!-- Luego lleva de contenido este listado -->
+    <!-- Genero un listener input en el card-list component para meterle el listado por evento -->
+    <gifs-card-list [gifs]="gifs"></gifs-card-list>
+
+
+  </div>
+
+
+</div>

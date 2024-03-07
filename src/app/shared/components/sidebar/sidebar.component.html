@@ -1,0 +1,33 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+
+<h3 class="text-light">GifsApp</h3>
+<hr class="text-white">
+
+<div class="list-group list-reset">
+  <!--<button class="list-group-item list-group-item-action">
+    Valorant
+  </button> -->
+
+  <!-- Recojo la info del service a través del metodo get tags creado en el sidebar component-->
+  <!-- Lo tengo que hacer asi porque el service es un private, y no puedo leerlo directamente -->
+  <button *ngFor="let tag of tags" class="list-group-item list-group-item-action"
+
+    (click)="searchTag( tag )"
+  >
+
+
+    <!-- Se pone {{}} para mostrar el valor de la vsariable por pantalla  del ngfor -->
+    <!--{{tag}} -->
+    <!--{{tag | uppercase}} -->
+    {{tag | titlecase}}
+  </button>
+
+</div>
+
+</div>
+
+
+
+<!-- TAREA: Inyectar el service en el sidebar component -->
+<!-- en el html de sidebar duplicar el button con un ngFor dependiendo de cuantos elementos tenga el service -->
+<!-- El service tiene que ser privado -->
